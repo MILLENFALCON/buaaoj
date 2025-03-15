@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+    int c,n,i,j,k;
+    int a[2000],b[2000][2];
+    scanf("%d",&c);
+    for(i=0;i<=c;i++)
+    {
+        scanf("%d",&n);
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[j]);
+            b[i][0]=a[0];
+            if(a[j]<b[i][0])
+            {
+                b[i][1]=b[i][0];
+                b[i][0]=a[j];
+            }
+        }
+    for(k=0;k<c;k++){
+        printf("%d\n",b[k][1]);
+    }
+    return 0;
+    }
+}

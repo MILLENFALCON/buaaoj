@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int main(){
+    int n,m,i,j,k,x[50010],y[50010],z[50010],a[50010],b[50010],c[50010];
+    int boll[50010];
+    while(~scanf("%d\n",&n)){
+        for(i=0;i<n;i++)
+        {
+        scanf("%d %d %d\n",&x[i],&y[i],&z[i]);
+        }
+        scanf("%d\n",&m);
+        for(j=0;j<m;j++)
+        {
+        scanf("%d %d %d\n",&a[j],&b[j],&c[j]);
+            for(k=0;k<n;k++)
+            {
+                if(x[k]==a[j]&&y[k]==b[j]&&z[k]==c[j])
+                {
+                    boll[k]=1;    
+                }
+                else
+                {
+                    boll[k]=0;    
+                }
+            }
+        }
+        for(k=0;k<m;k++){
+            if(boll[k] == 1)
+            {
+            printf("YES\n");
+            }
+            else
+            {
+            printf("NO\n");
+            }
+        }
+    return 0;
+    }
+}
